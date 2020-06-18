@@ -87,3 +87,4 @@ def update_member(request):
         print(member_name,member_age,gender,constituent_id,party_id,ruling_start_date,"+++++++++")
         update_ = party_member.objects.filter(Q(constituent_id=constituent_id) & Q(ruling_start_date=ruling_start_date)).update(member_name=member_name,member_age=member_age,gender=gender)
     return HttpResponseRedirect("/view_all")
+
